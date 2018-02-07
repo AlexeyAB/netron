@@ -1,0 +1,202 @@
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif;
+    font-size: 12px;
+    text-rendering: geometricPrecision;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e6e6e6;
+}
+
+.center {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.absolute { 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo {
+    width: 128px;
+    height: 128px;
+}
+
+.logo .stroke {
+    stroke: #bbbbbb;
+}
+
+.logo .fill {
+    fill: #bbbbbb;
+}
+
+.logo .border {
+    stroke: #aaaaaa;
+}
+
+.spinner {
+    -webkit-animation: orbit 0.5s infinite linear;
+    animation: orbit 0.5s infinite linear;
+}
+
+.spinner .stroke {
+    stroke: #e6e6e6;
+}
+
+@-webkit-keyframes orbit {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes orbit {
+      0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 
+      100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+.background button {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.25;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 10px 0 10px;
+    min-width: 60px;
+    height: 30px;
+    border-radius: 6px;
+    transition: 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    color: #888;
+    background-color: #e6e6e6;
+    border: 1px solid #aaa;
+}
+
+.background button:hover { 
+    color: #e6e6e6;
+    background-color: #aaa;
+    cursor: hand;
+    transition: 0.2s;
+}
+
+.background button:focus
+{
+    outline: 0;
+}
+
+.graph {
+    display: block;
+    position: absolute;
+    background-color: #ffffff;
+    text-rendering: geometricPrecision;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.graph-container {
+    background: #ffffff;
+}
+
+.toolbar {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.toolbar button {
+    background: None;
+    border-radius: 6px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    fill: None;
+    stroke: #777;
+    cursor: hand;
+    width: 24px;
+    height: 24px;
+}
+
+.toolbar button:focus {
+    outline: 0;
+}
+
+.icon .border { 
+    stroke: #fff;
+}
+
+.icon .stroke { 
+    stroke: #808080;
+}
+
+.icon:hover .stroke { 
+    stroke: #000000;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .toolbar button {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+.background { background-color: #1e1e1e; }    
+.logo .stroke { stroke: #666666; }
+.logo .fill { fill: #666666; }
+.logo .border { stroke: #000000; }
+.spinner .stroke { stroke: #aaaaaa; }
+.graph { background-color: #404040; }
+.background button { color: #888888; background-color: #1e1e1e; border-color: #888888; }
+.background button:hover { color: #1e1e1e; background-color: #aaaaaa; }
+.icon .border { stroke: #1d1d1d; }    
+.icon .stroke { stroke: #aaaaaa; }
+.icon:hover .stroke { stroke: #dfdfdf; }
+}
+
+.dark-mode .background { background-color: #1e1e1e; }    
+.dark-mode .logo .stroke { stroke: #666666; }
+.dark-mode .logo .fill { fill: #666666; }
+.dark-mode .logo .border { stroke: #000000; }
+.dark-mode .spinner .stroke { stroke: #aaaaaa; }
+.dark-mode .graph { background-color: #404040; }
+.dark-mode .background button { color: #888888; background-color: #1e1e1e; border-color: #888888; }
+.dark-mode .background button:hover { color: #1e1e1e; background-color: #aaaaaa; }
+.dark-mode .icon .border { stroke: #1d1d1d; }    
+.dark-mode .icon .stroke { stroke: #aaaaaa; }
+.dark-mode .icon:hover .stroke { stroke: #dfdfdf; }
